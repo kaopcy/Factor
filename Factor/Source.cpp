@@ -1,15 +1,23 @@
 #include<stdio.h>
 int main()
 {
-	int n;
+	long int n;
 	printf("Enter number : ");
 	scanf_s("%d", &n);
-	printf("Factor of number %d : ", n);
-	for (int i = 1; i <= n; i++)
+	if (n >= 0 && n <= 999999999)
 	{
-		if (n % i == 0)
+		printf("Factor of number %ld : ", n);
+		for (long int i = 1; i <= n; i++)
 		{
-			printf("%d ", i);
+			if (n % i == 0)
+			{
+				printf("%ld ", i);
+			}
 		}
 	}
+	else
+	{
+		printf("error");
+	}
+	return(0);
 }
